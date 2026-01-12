@@ -63,13 +63,30 @@ function createSquare(side){
 
 // constractor
 function mahasiswa(NIM, nama){
-    this.NIM = NIM,
-    this.nama = nama,
+    this.NIM = NIM;
+    this.nama = nama;
+    let location = {x: 0, y : 0};
     this.getMhsInfo = function(){
         console.log('Nama :', nama);
         console.log('NIM :', NIM);
     }
+    this.getlocation = function(){
+        for(let keys in location){
+
+            console.log("lokasi ", keys, "=",location[keys]);
+        }
+        
+    }
 }
 
 const juana = new mahasiswa(2405551091, "i wayan juana satya adinata");
-juana.getMhsInfo();
+// juana.getMhsInfo();
+juana.getlocation()
+
+// for(let key in juana){
+//     console.log(key, typeof(juana[key]));
+// }
+
+// const keys = Object.keys(juana);
+
+// console.log(keys);
